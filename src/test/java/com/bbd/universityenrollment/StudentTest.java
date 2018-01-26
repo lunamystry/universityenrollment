@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AppTest {
+public class StudentTest {
     @Test
     public void shouldCreateStudent() {
         Student johnny = new Student("Johnny", 1, "1923-02-07");
@@ -19,17 +19,5 @@ public class AppTest {
         assertEquals(johnny.getName(), "Dukey");
         assertEquals(johnny.getStudentNumber(), 2);
         assertEquals(johnny.getDob(), "Changed");
-    }
-
-    @Test
-    public void shouldCreateCourse() {
-        Course course = new Course("Test", 1);
-        assertEquals(course.getName(), "Test");
-        assertEquals(course.getCapacity(), (Integer) 1);
-
-        course.setName("Some other name");
-        course.setCapacity(2);
-        assertEquals(course.getName(), "Some other name");
-        assertEquals(course.getCapacity(), (Integer) 2);
     }
 }
