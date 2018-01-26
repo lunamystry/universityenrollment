@@ -1,11 +1,11 @@
 package com.bbd.universityenrollment;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Course {
     private Integer capacity;
     private String name;
-    private ArrayList<Student> students;
+    private List<String> students;
     private Integer numberOfCourses;
 
     public Course(String name, Integer capacity) {
@@ -17,11 +17,11 @@ public class Course {
         this.capacity = capacity;
     }
 
-    public ArrayList<Student> getStudents() {
+    public List<String> getStudents() {
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
+    public void setStudents(List<String> students) {
         this.students = students;
     }
 
@@ -43,17 +43,5 @@ public class Course {
 
     public Integer getCapacity() {
         return capacity;
-    }
-
-    public boolean enrollStudent(Student s) {
-        if (this.students.size() < this.capacity) {
-            return this.students.add(s);
-        } else {
-            return false;
-        }
-    }
-
-    public boolean unenrollStudent(Student s) {
-        return this.students.remove(s);
     }
 }
